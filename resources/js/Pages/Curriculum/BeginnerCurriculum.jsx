@@ -1,6 +1,7 @@
-import MainNav from "@/Components/MainNav";
-import CTASection from "@/Components/CTASection";
-import CurriculumAccordion from "@/Components/CurriculumAccordion";
+import CTASection from "../Home/CTASection";
+import MainNav from "../Navigation/MainNav";
+import CurriculumAccordion from "./CurriculumAccordion";
+
 
 const beginnerCurriculum = [
     {
