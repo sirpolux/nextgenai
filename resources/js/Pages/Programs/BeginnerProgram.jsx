@@ -1,6 +1,7 @@
-import MainNav from "@/Components/MainNav";
-import CTASection from "@/Components/CTASection";
+
 import { Link } from "@inertiajs/react";
+import MainNav from "../Navigation/MainNav";
+import CTASection from "../Home/CTASection";
 
 export default function BeginnerProgram() {
     return (

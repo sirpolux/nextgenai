@@ -17,6 +17,14 @@ Route::get('/', function () {
     return Inertia::render('Home');
 })->name('home');
 
+Route::get('/programs/beginner', function () {
+    return Inertia::render('Programs/BeginnerProgram');
+})->name('programs.beginner');
+
+Route::get('/programs/automation', function () {
+    return Inertia::render('Programs/AutomationProgram');
+})->name('programs.automation'); 
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

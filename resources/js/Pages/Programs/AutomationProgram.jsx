@@ -1,11 +1,13 @@
-import MainNav from "@/Components/MainNav";
-import CTASection from "@/Components/CTASection";
+
+
 import { Link } from "@inertiajs/react";
+import MainNav from "../Navigation/MainNav";
+import CTASection from "../Home/CTASection";
 
 export default function AutomationProgram() {
     return (
         <>
-            <MainNav />
+            <MainNav/>
 
             <section className="pt-32 pb-20 bg-white">
                 <div className="max-w-4xl mx-auto px-6">

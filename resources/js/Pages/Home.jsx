@@ -1,4 +1,6 @@
+
 import BusinessSection from "./Home/BusinessSection";
+import CTASection from "./Home/CTASection";
 import FoundrySection from "./Home/FoundarySection";
 import HeroSection from "./Home/HeroSection";
 import ProgramsSection from "./Home/ProgramSection";
@@ -14,8 +16,8 @@ export default function Home() {
             <ProgramsSection />
             <FoundrySection />
             <BusinessSection />
-            {/* <Testimonials />
-            <CallToAction /> */}
+            <CTASection />
+
         </div>
     );
 }
