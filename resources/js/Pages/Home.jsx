@@ -4,6 +4,7 @@ import CTASection from "./Home/CTASection";
 import FoundrySection from "./Home/FoundarySection";
 import HeroSection from "./Home/HeroSection";
 import ProgramsSection from "./Home/ProgramSection";
+import TestimonialsSection from "./Home/TestimonialsSection";
 import WhatWeDo from "./Home/WhatWeDo";
 import MainNav from "./Navigation/MainNav";
 
@@ -16,6 +17,7 @@ export default function Home() {
             <ProgramsSection />
             <FoundrySection />
             <BusinessSection />
+            <TestimonialsSection />
             <CTASection />
 
         </div>

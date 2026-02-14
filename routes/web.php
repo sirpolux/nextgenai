@@ -25,6 +25,15 @@ Route::get('/programs/automation', function () {
     return Inertia::render('Programs/AutomationProgram');
 })->name('programs.automation'); 
 
+
+Route::get('/curriculum/beginner', function () {
+    return Inertia::render('Curriculum/BeginnerCurriculum');
+})->name('curriculum.beginner');
+
+Route::get('/curriculum/automation', function () {
+    return Inertia::render('Curriculum/AutomationCurriculum');
+})->name('curriculum.automation');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

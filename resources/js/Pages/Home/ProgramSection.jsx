@@ -6,13 +6,13 @@ const programs = [
         title: "Beginner Tech & AI Foundations",
         duration: "8 Weeks",
         desc: "For complete beginners who want to enter tech fast.",
-        link: "/programs/beginner"
+        link: "/curriculum/beginner"
     },
     {
         title: "AI Automation & Prompt Engineering",
         duration: "10 Weeks",
         desc: "For people who want to build AI tools and automate businesses.",
-        link: "/programs/automation"
+        link: "/curriculum/automation"
     }
 ];
 
