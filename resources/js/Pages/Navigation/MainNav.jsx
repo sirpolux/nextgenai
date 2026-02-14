@@ -1,45 +1,64 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "@inertiajs/react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function MainNav() {
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [programsOpen, setProgramsOpen] = useState(false);
+    const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
+    const [desktopProgramsOpen, setDesktopProgramsOpen] = useState(false);
+
+    useEffect(() => {
+        document.body.style.overflow = mobileOpen ? "hidden" : "auto";
+    }, [mobileOpen]);
+
+    const closeMenu = () => {
+        setMobileOpen(false);
+        setMobileProgramsOpen(false);
+    };
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                
+
                 {/* Logo */}
                 <Link href="/" className="text-xl font-bold text-slate-900">
                     NextGen <span className="text-orange-500">Starters</span>
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+                <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700 relative">
+                    
                     <Link href="/">Home</Link>
 
-                    <div className="relative">
-                        <button
-                            onClick={() => setProgramsOpen(!programsOpen)}
-                            className="flex items-center gap-1"
-                        >
+                    {/* Desktop Dropdown */}
+                    <div
+                        className="relative"
+                        onMouseEnter={() => setDesktopProgramsOpen(true)}
+                        onMouseLeave={() => setDesktopProgramsOpen(false)}
+                    >
+                        <button className="flex items-center gap-1">
                             Programs <ChevronDown size={16} />
                         </button>
 
                         <AnimatePresence>
-                            {programsOpen && (
+                            {desktopProgramsOpen && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 10 }}
-                                    className="absolute top-8 left-0 bg-white shadow-lg rounded-xl p-4 w-64"
+                                    className="absolute top-8 left-0 bg-white shadow-xl rounded-xl p-5 w-72 border border-gray-100"
                                 >
-                                    <Link href="/programs/beginner" className="block py-2 hover:text-orange-500">
+                                    <Link
+                                        href="/programs/beginner"
+                                        className="block py-2 hover:text-orange-500"
+                                    >
                                         Beginner Tech & AI Foundations
                                     </Link>
-                                    <Link href="/programs/automation" className="block py-2 hover:text-orange-500">
+                                    <Link
+                                        href="/programs/automation"
+                                        className="block py-2 hover:text-orange-500"
+                                    >
                                         AI Automation & Prompt Engineering
                                     </Link>
                                 </motion.div>
@@ -59,12 +78,12 @@ export default function MainNav() {
                     </Link>
                 </div>
 
-                {/* Mobile Icon */}
+                {/* Mobile Toggle */}
                 <button
-                    onClick={() => setMobileOpen(!mobileOpen)}
+                    onClick={() => setMobileOpen(true)}
                     className="md:hidden"
                 >
-                    {mobileOpen ? <X /> : <Menu />}
+                    <Menu size={28} />
                 </button>
             </div>
 
@@ -72,19 +91,56 @@ export default function MainNav() {
             <AnimatePresence>
                 {mobileOpen && (
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="md:hidden bg-white border-t border-gray-100 p-6 space-y-4"
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "100%" }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 bg-white z-50 p-8 flex flex-col "
                     >
-                        <Link href="/">Home</Link>
-                        <Link href="/programs">Programs</Link>
-                        <Link href="/foundry">Foundry</Link>
-                        <Link href="/business">For Businesses</Link>
-                        <Link href="/about">About</Link>
-                        <Link href="/apply" className="block bg-orange-500 text-white text-center py-2 rounded-full">
-                            Apply Now
-                        </Link>
+                        <div className="flex justify-between items-center mb-10">
+                            <h2 className="text-lg font-bold">
+                                NextGen <span className="text-orange-500">Starters</span>
+                            </h2>
+                            <button onClick={closeMenu}>
+                                <X size={28} />
+                            </button>
+                        </div>
+
+                        <div className="flex flex-col gap-6 text-lg font-medium">
+
+                            <Link onClick={closeMenu} href="/">Home</Link>
+
+                            {/* Mobile Dropdown */}
+                            <button
+                                onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+                                className="flex justify-between items-center"
+                            >
+                                Programs <ChevronDown size={20} />
+                            </button>
+
+                            {mobileProgramsOpen && (
+                                <div className="pl-4 flex flex-col gap-4 text-base text-gray-600">
+                                    <Link onClick={closeMenu} href="/programs/beginner">
+                                        Beginner Tech & AI Foundations
+                                    </Link>
+                                    <Link onClick={closeMenu} href="/programs/automation">
+                                        AI Automation & Prompt Engineering
+                                    </Link>
+                                </div>
+                            )}
+
+                            <Link onClick={closeMenu} href="/foundry">Foundry</Link>
+                            <Link onClick={closeMenu} href="/business">For Businesses</Link>
+                            <Link onClick={closeMenu} href="/about">About Us</Link>
+
+                            <Link
+                                onClick={closeMenu}
+                                href="/apply"
+                                className="mt-6 bg-orange-500 text-white text-center py-3 rounded-full"
+                            >
+                                Apply Now
+                            </Link>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>
