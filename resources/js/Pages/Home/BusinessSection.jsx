@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function BusinessSection() {
     return (
-        <section className="py-24 bg-slate-900 text-white">
+        <section id="business" className="py-24 bg-slate-900 text-white">
             <div className="max-w-7xl mx-auto px-6 text-center">
                 
                 <h2 className="text-3xl md:text-4xl font-bold">
@@ -28,12 +28,12 @@ export default function BusinessSection() {
                     ))}
                 </div>
 
-                <Link
+                {/* <Link
                     href="/business/book-demo"
                     className="inline-block mt-12 bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition"
                 >
                     Book a Demo
-                </Link>
+                </Link> */}
             </div>
         </section>
     );

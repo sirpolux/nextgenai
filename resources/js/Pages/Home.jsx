@@ -1,5 +1,6 @@
 
 import ContactUs from "./Contact/ContactUs";
+import FooterSection from "./Footer/FooterSection";
 import BusinessSection from "./Home/BusinessSection";
 import CTASection from "./Home/CTASection";
 import FoundrySection from "./Home/FoundarySection";
@@ -21,7 +22,7 @@ export default function Home() {
             <TestimonialsSection />
             <CTASection />
             <ContactUs />
-
+            <FooterSection />
         </div>
     );
 }

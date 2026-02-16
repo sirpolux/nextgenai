@@ -36,12 +36,13 @@ export default function CTASection() {
                     transition={{ duration: 1 }}
                     className="mt-12 flex flex-col md:flex-row justify-center gap-6"
                 >
-                    <Link
-                        href="/apply"
+                    <a
+                        href="https://forms.gle/MZHLiEvi124m2BCA8"
+                        target="_blank"
                         className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition shadow-lg"
                     >
                         Apply for Cohort 1
-                    </Link>
+                    </a>
 
                     <a
                         href="tel:+2347045130608"

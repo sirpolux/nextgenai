@@ -20,19 +20,20 @@ export default function HeroSection() {
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <Link
-                            href="/apply"
+                        <a
+                            href="https://forms.gle/MZHLiEvi124m2BCA8"
+                            target="_blank"
                             className="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition"
                         >
                             Apply for Cohort 1
-                        </Link>
+                        </a>
 
-                        <Link
-                            href="/business"
+                        <a
+                            href="#business"
                             className="border border-slate-900 px-6 py-3 rounded-full hover:bg-slate-900 hover:text-white transition"
                         >
                             Learn for Businesses
-                        </Link>
+                        </a>
                     </div>
                 </div>
 

@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
                     Real people. Real skills. Real income potential.
                 </p>
 
-                <div className="mt-16 grid md:grid-cols-3 gap-10">
+                {/* <div className="mt-16 grid md:grid-cols-3 gap-10">
 
                     {testimonials.map((item, index) => (
                         <motion.div
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
                         </motion.div>
                     ))}
 
-                </div>
+                </div> */}
             </div>
         </section>
     );

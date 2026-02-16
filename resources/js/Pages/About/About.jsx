@@ -3,6 +3,7 @@ import { Head, Link } from "@inertiajs/react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useRef } from "react";
 import MainNav from "../Navigation/MainNav";
+import FooterSection from "../Footer/FooterSection";
 
 export default function About() {
     const ref = useRef(null);
@@ -57,7 +58,7 @@ export default function About() {
                 </section>
 
                 {/* ================= WHO WE ARE ================= */}
-                <section className="py-20 px-6 md:px-16">
+                <section className="py-12 px-6 md:px-16">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -79,7 +80,7 @@ export default function About() {
                 </section>
 
                 {/* ================= GLASS DUAL MODEL ================= */}
-                <section className="py-20 px-6 md:px-16 mt-16">
+                <section className="py-20 px-6 md:px-16 mt-2">
                     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
                         {[
@@ -124,7 +125,7 @@ export default function About() {
                 </section>
 
                 {/* ================= DIFFERENTIATORS (Glass Cards) ================= */}
-                <section className="py-20 px-6 md:px-16 mt-20 mb-12">
+                <section className="py-8 px-6 md:px-16 mt-2 mb-12">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -159,13 +160,13 @@ export default function About() {
                 </section>
 
                 {/* ================= VISION ================= */}
-                <section className="py-24 bg-orange-500 w-full md:px-16 bg-gradient-to-r from-orange-500 to-orange-400 text-white text-center mt-16">
+                <section className="py-12 px-6 bg-orange-500 w-full md:px-16 bg-gradient-to-r from-orange-500 to-orange-400 text-white text-center mt-16">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="mt-32 max-w-4xl mx-auto"
+                        className="mt-8 max-w-4xl mx-auto"
                     >
                         <h2 className="text-2xl md:text-4xl font-bold mb-8">
                             Vision 2030
@@ -194,12 +195,13 @@ export default function About() {
                         </h2>
 
                         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
-                            <Link
-                                href="/apply"
+                            <a
+                                href="https://forms.gle/MZHLiEvi124m2BCA8"
+                                target="_blank"
                                 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg"
                             >
                                 Apply Now
-                            </Link>
+                            </a>
 
                             {/* <Link
                                 href="/for-businesses"
@@ -212,6 +214,8 @@ export default function About() {
                 </section>
 
             </div>
+
+            <FooterSection />
         </div>
     );
 }

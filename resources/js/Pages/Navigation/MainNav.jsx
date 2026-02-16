@@ -66,16 +66,17 @@ export default function MainNav() {
                         </AnimatePresence>
                     </div>
 
-                    <Link href="/foundry">Foundry</Link>
-                    <Link href="/business">For Businesses</Link>
+                    <Link href="#foundary">Foundry</Link>
+                    <Link href="#business">For Businesses</Link>
                     <Link href="/about">About Us</Link>
 
-                    <Link
-                        href="/apply"
+                    <a
+                        href="https://forms.gle/MZHLiEvi124m2BCA8"
+                        target="_blank"
                         className="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition"
                     >
                         Apply Now
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -130,16 +131,17 @@ export default function MainNav() {
                             )}
 
                             <Link onClick={closeMenu} href="/foundry">Foundry</Link>
-                            <Link onClick={closeMenu} href="/business">For Businesses</Link>
+                            <a onClick={closeMenu} href="#business">For Businesses</a>
                             <Link onClick={closeMenu} href="/about">About Us</Link>
 
-                            <Link
+                            <a
                                 onClick={closeMenu}
-                                href="/apply"
+                                target="_blank"
+                                href="https://forms.gle/MZHLiEvi124m2BCA8"
                                 className="mt-6 bg-orange-500 text-white text-center py-3 rounded-full"
                             >
                                 Apply Now
-                            </Link>
+                            </a>
                         </div>
                     </motion.div>
                 )}

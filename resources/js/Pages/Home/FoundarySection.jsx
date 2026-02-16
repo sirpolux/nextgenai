@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function FoundrySection() {
     return (
-        <section className="py-24 bg-white">
+        <section  className="py-24 bg-white" id="foundary">
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
                 
                 {/* Text */}
