@@ -9,7 +9,7 @@ export default function FoundrySection() {
                 {/* Text */}
                 <div>
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                        The NextGen Foundry —
+                        The NextGen Foundry 
                         <span className="text-orange-500"> Where Learning Becomes Income</span>
                     </h2>
 
@@ -38,7 +38,7 @@ export default function FoundrySection() {
                 {/* Image */}
                 <div>
                     <img
-                        src="/images/sample2.png"
+                        src="/img/nextgenai5.jpg"
                         alt="NextGen Foundry"
                         className="rounded-2xl shadow-xl"
                     />

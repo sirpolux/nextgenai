@@ -15,7 +15,7 @@ export default function HeroSection() {
 
                     <p className="mt-6 text-lg text-gray-600">
                         NextGen Starters trains Nigerians to build real AI tools 
-                        for real businesses — and earn recurring income through 
+                        for real businesses, and earn recurring income through 
                         our AI Foundry.
                     </p>
 
@@ -43,7 +43,7 @@ export default function HeroSection() {
                     transition={{ duration: 0.8 }}
                 >
                     <img
-                        src="/images/sample1.png"
+                        src="/img/nextgenai4.jpeg"
                         alt="AI student"
                         className="rounded-2xl shadow-xl"
                     />
