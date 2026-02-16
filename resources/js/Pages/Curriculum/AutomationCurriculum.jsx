@@ -3,6 +3,7 @@
 import MainNav from "../Navigation/MainNav";
 import CTASection from "../Home/CTASection";
 import CurriculumAccordion from "./CurriculumAccordion";
+import FooterSection from "../Footer/FooterSection";
 
 const automationCurriculum = [
     { title: "Week 1 — AI Fundamentals", points: ["What is AI", "Prompts", "Business AI use"] },
@@ -33,6 +34,7 @@ export default function AutomationCurriculum() {
             </section>
 
             <CTASection />
+            <FooterSection />
         </>
     );
 }

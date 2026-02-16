@@ -22,8 +22,8 @@ export default function FooterSection() {
                         <h4 className="text-white font-semibold mb-4">Quick Links</h4>
                         <ul className="space-y-3">
                             <li><a href="/" className="hover:text-orange-500 transition">Home</a></li>
-                            <li><a href="/programs" className="hover:text-orange-500 transition">Programs</a></li>
-                            <li><a href="/foundry" className="hover:text-orange-500 transition">Foundry</a></li>
+                            <li><a href="/#our_program" className="hover:text-orange-500 transition">Programs</a></li>
+                            <li><a href="/#foundary" className="hover:text-orange-500 transition">Foundry</a></li>
                             <li><a href="/#business" className="hover:text-orange-500 transition">For Businesses</a></li>
                             <li><a href="/about" className="hover:text-orange-500 transition">About Us</a></li>
                         </ul>

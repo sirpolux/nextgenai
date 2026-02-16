@@ -2,6 +2,7 @@
 import { Link } from "@inertiajs/react";
 import MainNav from "../Navigation/MainNav";
 import CTASection from "../Home/CTASection";
+import FooterSection from "../Footer/FooterSection";
 
 export default function BeginnerProgram() {
     return (
@@ -99,7 +100,9 @@ export default function BeginnerProgram() {
                 </div>
             </section>
 
-            <CTASection />
+            {/* <CTASection /> */}
+            <FooterSection />
+
         </>
     );
 }

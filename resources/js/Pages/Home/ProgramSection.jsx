@@ -18,7 +18,7 @@ const programs = [
 
 export default function ProgramsSection() {
     return (
-        <section className="py-24 bg-[#FFF8ED]">
+        <section className="py-24 bg-[#FFF8ED]" id="our_program">
             <div className="max-w-7xl mx-auto px-6 text-center">
                 
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900">

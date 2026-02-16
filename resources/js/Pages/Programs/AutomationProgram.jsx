@@ -3,6 +3,7 @@
 import { Link } from "@inertiajs/react";
 import MainNav from "../Navigation/MainNav";
 import CTASection from "../Home/CTASection";
+import FooterSection from "../Footer/FooterSection";
 
 export default function AutomationProgram() {
     return (
@@ -80,22 +81,24 @@ export default function AutomationProgram() {
 
 
                     <Link
-                        href="/programs/automation/curriculum"
+                        href="/curriculum/automation"
                         className="inline-block mt-10 text-orange-500 font-semibold hover:underline"
                     >
                         View Full Curriculum →
                     </Link>
                     <br />
-                    <Link
-                        href="/apply"
+                    <a
+                        target="_blank"
+                        href="https://forms.gle/MZHLiEvi124m2BCA8"
                         className="inline-block mt-10 bg-orange-500 text-white px-8 py-4 rounded-full"
                     >
                         Apply Now
-                    </Link>
+                    </a>
                 </div>
             </section>
 
-            <CTASection />
+            {/* <CTASection /> */}
+            <FooterSection />
         </>
     );
 }

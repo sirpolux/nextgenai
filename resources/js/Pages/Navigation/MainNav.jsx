@@ -18,17 +18,24 @@ export default function MainNav() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <nav className="fixed top-0 left-0 w-full z-40 bg-white/90 backdrop-blur-md border-b  border-gray-100">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
                 {/* Logo */}
-                <Link href="/" className="text-xl font-bold text-slate-900">
-                    NextGen <span className="text-orange-500">Starters</span>
+                <Link href="/" className="flex items-center gap-2">
+                    <img
+                        src="/img/logo.svg"
+                        alt="NextGen Starters Logo"
+                        className="h-8 w-auto"
+                    />
+                    <span className="text-xl font-bold text-slate-900">
+                        NextGen <span className="text-orange-500">Starters</span>
+                    </span>
                 </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700 relative">
-                    
+
                     <Link href="/">Home</Link>
 
                     {/* Desktop Dropdown */}
@@ -66,7 +73,7 @@ export default function MainNav() {
                         </AnimatePresence>
                     </div>
 
-                    <Link href="#foundary">Foundry</Link>
+                    <Link href="/#foundary">Foundry</Link>
                     <Link href="#business">For Businesses</Link>
                     <Link href="/about">About Us</Link>
 
@@ -96,7 +103,7 @@ export default function MainNav() {
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 bg-white z-50 p-8 flex flex-col "
+                        className="fixed inset-0 z-[999] bg-white p-8 h-[70vh] flex flex-col"
                     >
                         <div className="flex justify-between items-center mb-10">
                             <h2 className="text-lg font-bold">
@@ -107,7 +114,7 @@ export default function MainNav() {
                             </button>
                         </div>
 
-                        <div className="flex flex-col gap-6 text-lg font-medium">
+                        <div className="flex flex-col gap-6 text-lg font-medium ">
 
                             <Link onClick={closeMenu} href="/">Home</Link>
 

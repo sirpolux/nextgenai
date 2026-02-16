@@ -1,3 +1,4 @@
+import FooterSection from "../Footer/FooterSection";
 import CTASection from "../Home/CTASection";
 import MainNav from "../Navigation/MainNav";
 import CurriculumAccordion from "./CurriculumAccordion";
@@ -80,6 +81,7 @@ export default function BeginnerCurriculum() {
             </section>
 
             <CTASection />
+            <FooterSection />   
         </>
     );
 }
