@@ -130,7 +130,7 @@ export default function Apply() {
                             name="weekly_commitment"
                             options={["Yes", "No"]}
                             value={data.weekly_commitment}
-                            setData={setData}
+                            onChange = {(e)=>setData('weekly_commitment', e.target.value)}
                         />
 
                         {/* Payment Readiness */}
@@ -143,7 +143,7 @@ export default function Apply() {
                                 "Yes (Installment plan)"
                             ]}
                             value={data.payment_ready}
-                            setData={setData}
+                            onChange = {(e)=>setData('payment_ready', e.target.value)}
                         />
 
                         {/* Referral */}
@@ -160,7 +160,7 @@ export default function Apply() {
                                 "Other"
                             ]}
                             value={data.referral_source}
-                            setData={setData}
+                            onChange={(e)=>setData('referral_source', e.target.value)}
                         />
 
                         {/* Submit */}
