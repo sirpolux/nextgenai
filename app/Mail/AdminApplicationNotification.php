@@ -16,10 +16,16 @@ class AdminApplicationNotification extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(public $application)
     {
         //
     }
+
+    public function build()
+{
+    return $this->subject('New Application Submitted')
+        ->view('emails.admin_application_notification');
+}
 
     /**
      * Get the message envelope.

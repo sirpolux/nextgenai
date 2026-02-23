@@ -11,7 +11,7 @@ class StoreApplicationRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,17 @@ class StoreApplicationRequest extends FormRequest
     {
         return [
             //
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'location' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'max:255'],
+            'program' => ['required', 'string', 'max:255'],
+            'tech_level' => ['required', 'string', 'max:255'],
+            'has_laptop' => ['required', 'string', 'max:255'],
+            'can_commit' => ['required', 'string', 'max:255'],
+            'tuition_ready' => ['required', 'string', 'max:255'],
+            'referral_source' => ['required', 'string', 'max:255'],
+            'status' => ['required', 'string', 'max:255'],
         ];
     }
 }
