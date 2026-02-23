@@ -79,13 +79,13 @@ export default function MainNav() {
                         <a href="#business">For Businesses</a>
                         <Link href="/about">About Us</Link>
 
-                        <a
-                            href="https://forms.gle/MZHLiEvi124m2BCA8"
+                        <Link
+                            href="/program/apply"
                             target="_blank"
                             className="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition"
                         >
                             Apply Now
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Mobile Toggle */}
@@ -161,14 +161,14 @@ export default function MainNav() {
                             <a onClick={closeMenu} href="/#business">For Businesses</a>
                             <Link onClick={closeMenu} href="/about">About Us</Link>
 
-                            <a
+                            <Link
                                 onClick={closeMenu}
                                 target="_blank"
-                                href="https://forms.gle/MZHLiEvi124m2BCA8"
+                                href="/program/apply"
                                 className="mt-6 bg-orange-500 text-white text-center py-3 rounded-full"
                             >
                                 Apply Now
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
                 )}

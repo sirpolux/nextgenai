@@ -28,7 +28,7 @@ return [
     | Laravel supports a variety of mail "transport" drivers that can be used
     | when delivering an email. You may specify which one you're using for
     | your mailers below. You may also add additional mailers if needed.
-    |
+    | 
     | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
     |            "postmark", "resend", "log", "array",
     |            "failover", "roundrobin"
@@ -37,6 +37,16 @@ return [
 
     'mailers' => [
 
+        'mailtrap' => [
+            'transport' => 'smtp',
+            'host' => 'smtp.mailtrap.io',
+            'port' => '2525',
+            'encryption' => 'tls',
+            'username' => env('MAILTRAP_USERNAME'),
+            'password' => env('MAILTRAP_PASSWORD'),
+        ],
+
+        
         'smtp' => [
             'transport' => 'smtp',
             'scheme' => env('MAIL_SCHEME'),
