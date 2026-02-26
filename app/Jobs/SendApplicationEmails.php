@@ -31,7 +31,7 @@ class SendApplicationEmails implements ShouldQueue
     Mail::to($this->application->email)
         ->send(new ApplicationConfirmation($this->application));
 
-    Mail::to('macpaul201@gmail.com')
+    Mail::to('paulm@fundtroncapital.com')
         ->send(new AdminApplicationNotification($this->application));
 
     }

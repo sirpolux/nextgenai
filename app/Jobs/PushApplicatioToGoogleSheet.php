@@ -26,6 +26,6 @@ class PushApplicatioToGoogleSheet implements ShouldQueue
         //
           Http::timeout(10) // never wait 30s
             ->retry(3, 2000) // retry 3 times, 2s delay
-            ->post(env('GOOGLE_SHEET_WEBHOOK'), $this->application->toArray());
+            ->post(config('services.google_sheet_webhook'), $this->application->toArray());
     }
 }
