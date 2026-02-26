@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class AdminApplicationNotification extends Mailable
+class AdminApplicationNotification extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -21,11 +21,11 @@ class AdminApplicationNotification extends Mailable
         //
     }
 
-    public function build()
-{
-    return $this->subject('New Application Submitted')
-        ->view('emails.admin_application_notification');
-}
+//     public function build()
+// {
+//     return $this->subject('New Application Submitted')
+//         ->view('emails.admin_application_notification');
+// }
 
     /**
      * Get the message envelope.
@@ -43,7 +43,10 @@ class AdminApplicationNotification extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.admin_application_notification',
+            with: [
+                'application' => $this->application,
+            ]
         );
     }
 

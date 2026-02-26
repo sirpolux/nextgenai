@@ -22,7 +22,6 @@ class StoreApplicationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
             'location' => ['required', 'string', 'max:255'],
@@ -32,8 +31,8 @@ class StoreApplicationRequest extends FormRequest
             'has_laptop' => ['required', 'string', 'max:255'],
             'can_commit' => ['required', 'string', 'max:255'],
             'tuition_ready' => ['required', 'string', 'max:255'],
-            'referral_source' => ['required', 'string', 'max:255'],
-            'status' => ['required', 'string', 'max:255'],
+            'referral_source' => ['required', 'string',  'max:255'],
+            // 'status' => ['required', 'string', 'max:255'],
         ];
     }
 }

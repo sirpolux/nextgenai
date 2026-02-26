@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -51,5 +52,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/program/apply', function () {
     return Inertia::render('Registration/Apply');
 })->name('apply');
+
+Route::resource('application', ApplicationController::class);
+//Route::post('/program/apply',[ApplicationController::class, 'store'])->name('application.store');
 
 require __DIR__.'/auth.php';

@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Application;
 use App\Http\Requests\StoreApplicationRequest;
 use App\Http\Requests\UpdateApplicationRequest;
+use App\Jobs\PushApplicatioToGoogleSheet;
+use App\Jobs\SendApplicationEmails;
+use App\Mail\AdminApplicationNotification;
+use App\Mail\ApplicationComfirmation;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class ApplicationController extends Controller
 {
@@ -29,7 +35,16 @@ class ApplicationController extends Controller
      */
     public function store(StoreApplicationRequest $request)
     {
-        //
+       // dd($request->all());
+        $application = Application::create($request->all());
+        // Mail::to($request->email)->queue(new ApplicationComfirmation($application));
+       // Mail::to($request->email)->queue(new ApplicationComfirmation($application));
+        SendApplicationEmails::dispatch($application);
+        // Mail::to('nextgenstartersltd@gmail.com')->queue(new AdminApplicationNotification($application));
+        //send to google sheet
+        PushApplicatioToGoogleSheet::dispatch($application);
+        return back()->with('success', 'Application submitted successfully');
+
     }
 
     /**

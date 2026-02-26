@@ -9,4 +9,18 @@ class Application extends Model
 {
     /** @use HasFactory<\Database\Factories\ApplicationFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'location',
+        'phone',
+        'program',
+        'tech_level',
+        'has_laptop',
+        'can_commit',
+        'tuition_ready',
+        'referral_source',
+        'status',
+    ];
 }

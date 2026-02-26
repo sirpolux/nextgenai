@@ -7,6 +7,7 @@ import InputField from "../Form/InputField";
 import RadioGroup from "../Form/RadioGroup";
 import CTASection from "../Home/CTASection";
 import FooterSection from "../Footer/FooterSection";
+import Base from "../Base";
 
 export default function Apply() {
 
@@ -17,19 +18,27 @@ export default function Apply() {
         phone: "",
         program: "",
         tech_level: "",
-        laptop_access: "",
-        weekly_commitment: "",
-        payment_ready: "",
+        has_laptop: "",
+        can_commit: "",
+        tuition_ready: "",
         referral_source: ""
     });
 
     const submit = (e) => {
         e.preventDefault();
-        post("/apply");
+        post("/application", 
+            { 
+                onSuccess: () => 
+                    {
+                        reset();
+                        toast.success("Application submitted successfully");
+                    }
+            });
     };
 
     return (
         <>
+        <Base>
             <MainNav />
 
             <section className="pt-32 pb-20 bg-[#FFF8ED]">
@@ -95,7 +104,8 @@ export default function Apply() {
                                 "AI Automation & Prompt Engineering (10 Weeks)"
                             ]}
                             value={data.program}
-                            onChange={(e)=>setData('program', e.target.value)} />
+                            onChange={(e)=>setData('program', e.target.value)}
+                            error={errors.program} />
 
                         {/* Tech Level */}
                         <RadioGroup
@@ -111,39 +121,43 @@ export default function Apply() {
                             ]}
                             value={data.tech_level}
                             onChange={(e)=>setData('tech_level', e.target.value)}
+                            error={errors.tech_level}
                         />
 
                         {/* Laptop Access */}
                         <RadioGroup
                             label="Do you have access to a laptop and stable internet?"
                             required
-                            name="laptop_access"
+                            name="has_laptop"
                             options={["Yes", "No"]}
-                            value={data.laptop_access}
-                           onChange={(e)=>setData('laptop_access', e.target.value)}
+                            value={data.has_laptop}
+                           onChange={(e)=>setData('has_laptop', e.target.value)}
+                           error={errors.has_laptop}
                         />
 
                         {/* Weekly Commitment */}
                         <RadioGroup
                             label="Are you able to commit 6–10 hours weekly to live sessions and projects?"
                             required
-                            name="weekly_commitment"
+                            name="can_commit"
                             options={["Yes", "No"]}
-                            value={data.weekly_commitment}
-                            onChange = {(e)=>setData('weekly_commitment', e.target.value)}
+                            value={data.can_commit}
+                            onChange = {(e)=>setData('can_commit', e.target.value)}
+                            error={errors.can_commit}
                         />
 
                         {/* Payment Readiness */}
                         <RadioGroup
                             label="This is a paid program. Are you prepared to meet the tuition requirements?"
                             required
-                            name="payment_ready"
+                            name="tuition_ready"
                             options={[
                                 "Yes (Full payment)",
                                 "Yes (Installment plan)"
                             ]}
-                            value={data.payment_ready}
-                            onChange = {(e)=>setData('payment_ready', e.target.value)}
+                            value={data.tuition_ready}
+                            onChange = {(e)=>setData('tuition_ready', e.target.value)}
+                            error={errors.tuition_ready}
                         />
 
                         {/* Referral */}
@@ -161,6 +175,7 @@ export default function Apply() {
                             ]}
                             value={data.referral_source}
                             onChange={(e)=>setData('referral_source', e.target.value)}
+                            error={errors.referral_source}
                         />
 
                         {/* Submit */}
@@ -178,6 +193,7 @@ export default function Apply() {
             </section>
 
             <FooterSection />
+            </Base>
         </>
     );
 }
