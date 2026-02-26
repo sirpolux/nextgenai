@@ -15,7 +15,7 @@
     <!-- Header -->
     <tr>
         <td align="center" style="padding:30px;">
-            <img src="https://nextgenstarters.com/img/logo.png" width="160" alt="NextGen Starters Logo">
+            <img src="https://nextgenstarters.com/img/nextgen_starters_logo.png" width="80" alt="NextGen Starters Logo">
         </td>
     </tr>
 
