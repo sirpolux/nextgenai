@@ -34,6 +34,7 @@ class ApplicationConfirmation extends Mailable implements ShouldQueue
         );
     }
 
+
     public function attachments(): array
     {
         return [];

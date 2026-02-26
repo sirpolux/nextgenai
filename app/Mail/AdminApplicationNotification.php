@@ -21,12 +21,6 @@ class AdminApplicationNotification extends Mailable implements ShouldQueue
         //
     }
 
-//     public function build()
-// {
-//     return $this->subject('New Application Submitted')
-//         ->view('emails.admin_application_notification');
-// }
-
     /**
      * Get the message envelope.
      */

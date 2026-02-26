@@ -39,10 +39,11 @@ class ApplicationController extends Controller
         $application = Application::create($request->all());
         // Mail::to($request->email)->queue(new ApplicationComfirmation($application));
        // Mail::to($request->email)->queue(new ApplicationComfirmation($application));
-        SendApplicationEmails::dispatch($application);
+       
         // Mail::to('nextgenstartersltd@gmail.com')->queue(new AdminApplicationNotification($application));
         //send to google sheet
         PushApplicatioToGoogleSheet::dispatch($application);
+        SendApplicationEmails::dispatch($application);
         return back()->with('success', 'Application submitted successfully');
 
     }
