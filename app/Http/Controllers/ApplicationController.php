@@ -7,10 +7,6 @@ use App\Http\Requests\StoreApplicationRequest;
 use App\Http\Requests\UpdateApplicationRequest;
 use App\Jobs\PushApplicatioToGoogleSheet;
 use App\Jobs\SendApplicationEmails;
-use App\Mail\AdminApplicationNotification;
-use App\Mail\ApplicationComfirmation;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Mail;
 
 class ApplicationController extends Controller
 {
