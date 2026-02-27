@@ -20,13 +20,13 @@ export default function HeroSection() {
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <a
-                            href="https://forms.gle/MZHLiEvi124m2BCA8"
+                        <Link
+                            href={route("apply")}
                             target="_blank"
                             className="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition"
                         >
                             Apply for Cohort 1
-                        </a>
+                        </Link>
 
                         <a
                             href="#business"

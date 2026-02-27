@@ -55,6 +55,11 @@ Route::get('/program/apply', function () {
     return Inertia::render('Registration/Apply');
 })->name('apply');
 
+Route::get('/application/success', function () {
+    return Inertia::render('Registration/SuccessAlert');
+})->name('application.success');
+
+
 Route::get('/test-mail', function () {
     try {
         Mail::raw('This is a test email from Laravel.', function ($message) {

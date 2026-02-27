@@ -195,13 +195,13 @@ export default function About() {
                         </h2>
 
                         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
-                            <a
-                                href="https://forms.gle/MZHLiEvi124m2BCA8"
+                            <Link
+                                href={route("apply")}
                                 target="_blank"
                                 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold transition shadow-lg"
                             >
                                 Apply Now
-                            </a>
+                            </Link>
 
                             {/* <Link
                                 href="/for-businesses"

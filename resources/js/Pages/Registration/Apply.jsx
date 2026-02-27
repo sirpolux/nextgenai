@@ -8,6 +8,7 @@ import RadioGroup from "../Form/RadioGroup";
 import CTASection from "../Home/CTASection";
 import FooterSection from "../Footer/FooterSection";
 import Base from "../Base";
+import toast from "react-hot-toast";
 
 export default function Apply() {
 
@@ -30,7 +31,7 @@ export default function Apply() {
             { 
                 onSuccess: () => 
                     {
-                        reset();
+                        // reset();
                         toast.success("Application submitted successfully");
                     }
             });
