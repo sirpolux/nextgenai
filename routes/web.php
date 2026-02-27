@@ -56,7 +56,7 @@ Route::get('/program/apply', function () {
 })->name('apply');
 
 Route::get('/application/success', function () {
-    return Inertia::render('Registration/SuccessAlert');
+    return Inertia::render('Registration/Success');
 })->name('application.success');
 
 

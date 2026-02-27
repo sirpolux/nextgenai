@@ -71,6 +71,9 @@
                         <td style="background:#F8FAFC;"><strong>Referral</strong></td>
                         <td>{{ $application->referral_source }}</td>
                     </tr>
+                    <tr>
+                        <td style="background:#F8FAFC;"><strong>Reason for Applying</strong></td>
+                        <td>{{ $application->reason_for_applying }}</td>
                 </table>
 
             </div>

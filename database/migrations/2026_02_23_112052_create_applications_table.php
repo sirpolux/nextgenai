@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('location');
             $table->string('phone');
+            $table->text('reason_for_applying');
             $table->string('program');
             $table->string('tech_level');
             $table->string('has_laptop');

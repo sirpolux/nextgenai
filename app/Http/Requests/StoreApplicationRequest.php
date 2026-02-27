@@ -32,6 +32,7 @@ class StoreApplicationRequest extends FormRequest
             'can_commit' => ['required', 'string', 'max:255'],
             'tuition_ready' => ['required', 'string', 'max:255'],
             'referral_source' => ['required', 'string',  'max:255'],
+            'reason_for_applying' => ['required', 'string'],
             // 'status' => ['required', 'string', 'max:255'],
         ];
     }

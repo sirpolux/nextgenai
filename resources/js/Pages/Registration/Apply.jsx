@@ -9,6 +9,7 @@ import CTASection from "../Home/CTASection";
 import FooterSection from "../Footer/FooterSection";
 import Base from "../Base";
 import toast from "react-hot-toast";
+import InputArea from "../Form/InputArea";
 
 export default function Apply() {
 
@@ -17,12 +18,14 @@ export default function Apply() {
         name: "",
         location: "",
         phone: "",
+        reason_for_applying: "",
         program: "",
         tech_level: "",
         has_laptop: "",
         can_commit: "",
         tuition_ready: "",
         referral_source: ""
+
     });
 
     const submit = (e) => {
@@ -32,7 +35,7 @@ export default function Apply() {
                 onSuccess: () => 
                     {
                         // reset();
-                        toast.success("Application submitted successfully");
+                        // toast.success("Application submitted successfully");
                     }
             });
     };
@@ -93,6 +96,15 @@ export default function Apply() {
                             value={data.phone}
                             onChange={(e) => setData("phone", e.target.value)}
                             error={errors.phone}
+                        />
+
+                        <InputArea 
+                            label="Why are you interested in this program and what do you hope to achieve?"
+                            required
+                            name="reason_for_applying"
+                            value={data.reason_for_applying}
+                            onChange={(e)=>setData('reason_for_applying', e.target.value)}
+                            error={errors.reason_for_applying}
                         />
 
                         {/* Interested Program */}

@@ -17,6 +17,7 @@ class Application extends Model
         'phone',
         'program',
         'tech_level',
+        'reason_for_applying',
         'has_laptop',
         'can_commit',
         'tuition_ready',

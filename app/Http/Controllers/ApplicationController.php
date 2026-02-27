@@ -31,6 +31,12 @@ class ApplicationController extends Controller
      */
     public function store(StoreApplicationRequest $request)
     {
+        
+        //check if active application exists for the email
+        $activeApplication = Application::where('email', $request->email)->where('status', 'Pending')->first();
+        if($activeApplication){
+            return redirect()->route('application.success')->with('success', 'Application submitted successfully');
+        }
         $application = Application::create($request->all());
         PushApplicatioToGoogleSheet::dispatch($application);
         SendApplicationEmails::dispatch($application);
