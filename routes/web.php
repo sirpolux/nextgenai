@@ -83,6 +83,10 @@ Route::get('/join-waitlist', function () {
     return Inertia::render('Cohort/FoundingCohortSection');
 })->name('waitlist');   
 
+Route::get('/join-waitlist/form', function () {
+    return Inertia::render('Cohort/WaitlistForm');
+})->name('waitlist.form');
+
 Route::get('/test-mail', function () {
     try {
         Mail::raw('This is a test email from Laravel.', function ($message) {

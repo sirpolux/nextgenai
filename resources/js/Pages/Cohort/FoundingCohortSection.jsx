@@ -48,7 +48,7 @@ export default function FoundingCohortSection() {
                 </p>
 
                 <Link
-                    href="/join-waitlist"
+                    href="/join-waitlist/form"
                     className="inline-block mt-8 bg-orange-500 text-white px-10 py-4 rounded-full font-semibold hover:bg-orange-600 transition"
                 >
                     Join the Waitlist
