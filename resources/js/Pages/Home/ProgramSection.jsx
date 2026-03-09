@@ -13,7 +13,20 @@ const programs = [
         duration: "10 Weeks",
         desc: "For people who want to build AI tools and automate businesses.",
         link: "/curriculum/automation"
+    },
+    {
+        title:"Data Analytics (Coming Soon)",
+        duration: "12 Weeks",
+        desc: "For people who want to analyze data and make informed decisions.",
+        link: "/curriculum/data-analytics"
+    },
+    {
+        title:"Software Engineering (Coming Soon)",
+        duration: "14 Weeks",
+        desc: "For people who want to build scalable software solutions.",
+        link: "/curriculum/software-engineering"
     }
+
 ];
 
 export default function ProgramsSection() {

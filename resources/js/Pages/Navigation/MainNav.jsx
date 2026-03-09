@@ -70,6 +70,15 @@ export default function MainNav() {
                                         >
                                             AI Automation & Prompt Engineering
                                         </Link>
+                                        {/* <Link href="/programs/data-analytics" className="block py-2 text-gray-400 cursor-not-allowed">
+                                            Data Analytics (Coming Soon)
+                                        </Link> */}
+                                        <Link href="/programs/data-analytics" className="block py-2 hover:text-orange-500">
+                                            Data Analytics (Coming Soon)
+                                        </Link>
+                                        <Link href="/programs/software-engineering" className="block py-2 hover:text-orange-500">
+                                            Software Engineering (Coming Soon)
+                                        </Link>
                                     </motion.div>
                                 )}
                             </AnimatePresence>

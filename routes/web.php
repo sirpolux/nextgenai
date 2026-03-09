@@ -28,6 +28,25 @@ Route::get('/programs/automation', function () {
     return Inertia::render('Programs/AutomationProgram');
 })->name('programs.automation'); 
 
+Route::get('/programs/data-analytics', function () {
+    return Inertia::render('Programs/DataAnalyticsProgram');
+})->name('programs.data-analytics');
+
+Route::get('/programs/software-engineering', function () {
+    return Inertia::render('Programs/SoftwareEngineeringProgram');
+})->name('programs.software-engineering');
+
+
+
+
+Route::get('/curriculum/data-analytics', function () {
+    return Inertia::render('Curriculum/DataAnalyticsCurriculum');
+})->name('curriculum.data-analytics');
+
+
+Route::get('/curriculum/software-engineering', function () {
+    return Inertia::render('Curriculum/SoftwareEngineeringCurriculum');
+})->name('curriculum.software-engineering');
 
 Route::get('/curriculum/beginner', function () {
     return Inertia::render('Curriculum/BeginnerCurriculum');
