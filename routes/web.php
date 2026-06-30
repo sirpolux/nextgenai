@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WaitListController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -79,9 +80,7 @@ Route::get('/application/success', function () {
 })->name('application.success');
 
 
-Route::get('/join-waitlist', function () {
-    return Inertia::render('Cohort/FoundingCohortSection');
-})->name('waitlist');   
+Route::get('/join-waitlist/{programme}',[WaitListController::class,'index'] )->name('waitlist');   
 
 Route::get('/join-waitlist/form', function () {
     return Inertia::render('Cohort/WaitlistForm');

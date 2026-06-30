@@ -90,7 +90,7 @@ export default function SoftwareEngineeringProgram() {
                     <br />
 
                     <Link
-                        href="/join-waitlist"
+                        href="/join-waitlist/software-engineering"
                         className="inline-block mt-10 bg-orange-500 text-white px-8 py-4 rounded-full"
                     >
                         Join Waitlist

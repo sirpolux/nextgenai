@@ -2,13 +2,13 @@ import { useForm } from "@inertiajs/react";
 import MainNav from "../Navigation/MainNav";
 import FooterSection from "../Footer/FooterSection";
 
-export default function WaitlistForm({ program }) {
+export default function WaitlistForm({ programme }) {
 
     const { data, setData, post, processing } = useForm({
         name: "",
         email: "",
         phone: "",
-        program: program,
+        program: programme,
         experience_level: "",
         message: ""
     });
@@ -55,6 +55,18 @@ export default function WaitlistForm({ program }) {
                             className="w-full border p-4 rounded-lg"
                             onChange={e => setData('phone', e.target.value)}
                         />
+
+                            <input
+                            type="text"
+                            placeholder="Phone Number"
+                            className="w-full border p-4 rounded-lg uppercase bg-gray-200 cursor-not-allowed"
+                            value={programme}
+                            readOnly
+                            disabled
+                            // onChange={e => setData('phone', e.target.value)}
+                        />
+
+
 
                         <select
                             className="w-full border p-4 rounded-lg"

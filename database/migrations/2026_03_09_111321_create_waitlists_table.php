@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('waitlists', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('phone')->nullable();
+            $table->string('program');
+            $table->string('experience_level');
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }

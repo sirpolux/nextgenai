@@ -25,7 +25,6 @@ class SendWaitlistApplicationEmails implements ShouldQueue
      */
     public function handle(): void
     {
-        //
         Mail::to($this->waitlist->email)->send(new WaitlistAdminNotification($this->waitlist));
         Mail::to($this->waitlist->email)->send(new WaitListConfirmation($this->waitlist));
     }
